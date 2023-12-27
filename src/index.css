@@ -1,0 +1,455 @@
+@font-face {
+  font-family: NotoColorEmojiLimited;
+  src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+  unicode-range: u+1f1e6-1f1ff;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(90deg, #eee, #eee);
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif,
+    Apple Color Emoji, NotoColorEmojiLimited, Segoe UI Emoji, Segoe UI Symbol;
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.delete-scroll-bar {
+  -ms-overflow-style: none;
+  max-height: -webkit-fill-available;
+  scrollbar-width: none;
+}
+
+.delete-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: initial;
+}
+
+.new-btn {
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 14px;
+  text-align: center;
+  transition-duration: 0.2s;
+}
+
+.new-btn:disabled {
+  opacity: 0.5;
+}
+
+.new-btn.gray-text {
+  background-color: initial;
+  border-color: transparent;
+  color: #525252;
+}
+
+.new-btn.gray-text:active,
+.new-btn.gray-text:hover {
+  background-color: #f5f5f5 !important;
+  border-color: transparent !important;
+  color: #525252 !important;
+}
+
+.new-btn.black-text {
+  background-color: #525252;
+  border-color: #525252;
+  color: #fff;
+}
+
+.new-btn.black-text:active,
+.new-btn.black-text:hover {
+  background-color: #404040 !important;
+  border-color: #404040 !important;
+  color: #fff !important;
+}
+
+.new-btn.violet-text {
+  background-color: initial;
+  border-color: transparent;
+  color: #6004ff;
+}
+
+.new-btn.violet-text:active,
+.new-btn.violet-text:hover {
+  background-color: #f5f5f5 !important;
+  border-color: transparent !important;
+  color: #3a0299 !important;
+}
+
+.new-btn.gray {
+  background-color: #f5f5f5;
+  border-color: #e6e6e6;
+  color: #525252;
+}
+
+.new-btn.gray:active,
+.new-btn.gray:hover {
+  background-color: #f2f2f2 !important;
+  border-color: #e6e6e6 !important;
+  color: #525252 !important;
+}
+
+.new-btn.white {
+  background-color: #fafafa;
+  border-color: #e6e6e6;
+  color: #525252;
+}
+
+.new-btn.white:active,
+.new-btn.white:hover {
+  background-color: #f4f4f4 !important;
+  border-color: #e6e6e6 !important;
+  color: #525252 !important;
+}
+
+.new-btn.plain {
+  background-color: #f5f5f5;
+  border-color: #e6e6e6;
+  color: #525252;
+}
+
+.new-btn.plain:active,
+.new-btn.plain:hover {
+  background-color: #f2f2f2 !important;
+  border-color: #e6e6e6 !important;
+  color: #525252 !important;
+}
+
+.new-btn.violet {
+  background-color: #fafafa;
+  border-color: #e6e6e6;
+  color: #6004ff;
+}
+
+.new-btn.violet:active,
+.new-btn.violet:hover {
+  background-color: #f4f4f4 !important;
+  border-color: #e6e6e6 !important;
+  color: #6004ff !important;
+  transition-duration: 0.2s;
+}
+
+.new-btn.violet-outline {
+  background-color: initial;
+  border-color: #6004ff;
+  color: #6004ff;
+}
+
+.new-btn.violet-outline:active,
+.new-btn.violet-outline:hover {
+  background-color: initial !important;
+  border-color: #3a0299 !important;
+  color: #3a0299 !important;
+  transition-duration: 0.2s;
+}
+
+.new-btn.violet-solid {
+  background: #6004ff;
+  border: none;
+  color: #fff;
+}
+
+.new-btn.violet-solid:active,
+.new-btn.violet-solid:hover {
+  background: #3a0299;
+  border: none;
+  color: #fff !important;
+}
+
+.new-btn.danger-solid {
+  background: #cc0327;
+  border: none;
+  color: #fff;
+}
+
+.new-btn.danger-solid:active,
+.new-btn.danger-solid:hover {
+  background: #ba0223;
+  border: none;
+  color: #fff !important;
+}
+
+.new-btn.violet-fill {
+  background: linear-gradient(
+    135deg,
+    #6004ff,
+    #7f35ff 23.95%,
+    #370097 60.11%,
+    #8d4aff
+  );
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  color: #fff;
+}
+
+.new-btn.violet-fill:active,
+.new-btn.violet-fill:hover {
+  background: linear-gradient(
+    135deg,
+    #6004ff,
+    #1a004b 23.95%,
+    #370097 60.11%,
+    #1a004b
+  );
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  color: #fff !important;
+}
+
+.new-btn.danger {
+  background-color: #fafafa;
+  border-color: #e6e6e6;
+  color: #cc0327;
+}
+
+.new-btn.danger:active,
+.new-btn.danger:hover {
+  background-color: #f4f4f4 !important;
+  border-color: #e6e6e6 !important;
+  color: #cc0327;
+}
+
+.new-btn.warning {
+  background-color: #fafafa;
+  border-color: #e6e6e6;
+  color: #f6be00;
+}
+
+.new-btn.warning:active,
+.new-btn.warning:hover {
+  background-color: #f4f4f4 !important;
+  border-color: #e6e6e6 !important;
+  color: #f6be00;
+}
+
+.custom-modal .modal-header {
+  background-color: #6c2ad4;
+  border: none;
+  color: #fff;
+}
+
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 6s linear infinite;
+  animation: rotating 6s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes logosright {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes logosright {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.logos-slide {
+  -webkit-animation: slide 20s linear infinite;
+  animation: slide 20s linear infinite;
+}
+
+.logos-slide,
+.logos-slide a {
+  display: inline-block;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+.logos-slide > div {
+  margin: 0 8px;
+}
+
+.logos:after,
+.logos:before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 80px;
+  z-index: 2;
+}
+
+.infinite-scroll-loop-outer {
+  position: relative;
+}
+
+.infinite-scroll-loop-outer:after {
+  background: linear-gradient(
+    90deg,
+    #fff 0,
+    hsla(0, 0%, 100%, 0) 15%,
+    hsla(0, 0%, 100%, 0) 85%,
+    #fff
+  );
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.infinite-scroll-loop-outer {
+  position: relative;
+}
+
+.infinite-scroll-loop-outer:after {
+  background: linear-gradient(
+    90deg,
+    #fff 0,
+    hsla(0, 0%, 100%, 0) 15%,
+    hsla(0, 0%, 100%, 0) 85%,
+    #fff
+  );
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.infinite-scroll-loop-outer {
+  position: relative;
+}
+
+.infinite-scroll-loop-outer:after {
+  background: linear-gradient(
+    90deg,
+    #fff 0,
+    hsla(0, 0%, 100%, 0) 15%,
+    hsla(0, 0%, 100%, 0) 85%,
+    #fff
+  );
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.infinite-scroll-loop-inner {
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.infinite-scroll-loop-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.infinite-scroll-loop-inner .card-1 {
+  -webkit-animation: slide 20s linear infinite;
+  animation: slide 20s linear infinite;
+}
+
+.infinite-scroll-loop-inner .card-2 {
+  -webkit-animation: logosright 20s linear infinite;
+  animation: logosright 20s linear infinite;
+}
+
+.navigation-toggler {
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  color: #222;
+  cursor: pointer;
+  font-size: 33px;
+  line-height: 100%;
+}
+
+.navigation-toggler.active {
+  border-color: #6004ff;
+  color: #6004ff;
+}
