@@ -2,10 +2,10 @@
 import { css } from "@emotion/react";
 import { useState, useEffect } from "react";
 import PromotionBanner from "./PromotionBanner";
-import { ReactComponent as CheckIcon } from "../assets/img/icons/check-icon.svg";
+import { ReactComponent as CheckIcon } from "../../assets/img/icons/check-icon.svg";
 
-import laptopLanding1 from "../assets/img/graphics/laptop-landing-1.png";
-import laptopLanding3 from "../assets/img/graphics/laptop-landing-3.png";
+import laptopLanding1 from "../../assets/img/graphics/laptop-landing-1.png";
+import laptopLanding3 from "../../assets/img/graphics/laptop-landing-3.png";
 import { Link } from "react-router-dom";
 
 const features = [
@@ -199,7 +199,7 @@ const HeaderSection = () => {
               Try for free
             </Link>
             <Link
-            to="/signup"
+              to="/signup"
               type="button"
               className="new-btn violet-fill btn btn-primary  d-md-none"
               css={css`

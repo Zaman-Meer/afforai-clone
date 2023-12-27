@@ -1,5 +1,5 @@
-import HeaderSection from "../components/HeaderSection";
-import LoveByUserSection from "../components/LoveByUserSection";
+import HeaderSection from "../components/LandingPage/HeaderSection";
+import LoveByUserSection from "../components/LandingPage/LoveByUserSection";
 import DocumentSection from "../components/LandingPage/DocumentSection";
 import ProductivitySection from "../components/LandingPage/ProductivitySection";
 import ChooseUs from "../components/LandingPage/ChooseUs";

@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import laptopLanding2 from "../assets/img/graphics/laptop-landing-2.png";
+import laptopLanding2 from "../../assets/img/graphics/laptop-landing-2.png";
 
 const LoveByUserSection = () => {
   return (
